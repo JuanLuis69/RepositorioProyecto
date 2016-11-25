@@ -33,27 +33,78 @@ public class RestauranteTest {
      * Test of getListaEvaluaciones method, of class Restaurante.
      */
     @Test
-    public void testGetListaEvaluaciones() {
-        System.out.println("getListaEvaluaciones");
-        Restaurante instance = new Restaurante();
-        ArrayList<Evaluacion> expResult = null;
-        ArrayList<Evaluacion> result = instance.getListaEvaluaciones();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetListaEvaluacionesConElementos() {
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        Evaluacion e = new Evaluacion();
+        e.setCliente(null);
+        e.setEstrellas(1);
+        e.setResena("");
+
+        ArrayList<Evaluacion> listaPrueba = new ArrayList();
+        listaPrueba.add(e);
+        r.setListaEvaluaciones(listaPrueba);
+
+        ArrayList<Evaluacion> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = r.getListaEvaluaciones();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testGetListaEvaluacionesVacia() {
+        //Inicializacion
+        Restaurante r = new Restaurante();
+
+        ArrayList<Evaluacion> listaPrueba = new ArrayList();
+        r.setListaEvaluaciones(listaPrueba);
+
+        ArrayList<Evaluacion> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = r.getListaEvaluaciones();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of setListaEvaluaciones method, of class Restaurante.
      */
     @Test
-    public void testSetListaEvaluaciones() {
-        System.out.println("setListaEvaluaciones");
-        ArrayList<Evaluacion> listaEvaluaciones = null;
-        Restaurante instance = new Restaurante();
-        instance.setListaEvaluaciones(listaEvaluaciones);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetListaEvaluacionesConElementos() {
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        Evaluacion e = new Evaluacion();
+        e.setCliente(null);
+        e.setEstrellas(1);
+        e.setResena("");
+
+        ArrayList<Evaluacion> resultadoEsperado = new ArrayList();
+        resultadoEsperado.add(e);
+        r.setListaEvaluaciones(resultadoEsperado);
+
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = r.getListaEvaluaciones();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    public void testSetListaEvaluacionesVacia() {
+        //Inicializacion
+        Restaurante r = new Restaurante();
+
+        ArrayList<Evaluacion> resultadoEsperado = new ArrayList();
+
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = r.getListaEvaluaciones();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -61,13 +112,16 @@ public class RestauranteTest {
      */
     @Test
     public void testGetNombre() {
-        System.out.println("getNombre");
-        Restaurante instance = new Restaurante();
-        String expResult = "";
-        String result = instance.getNombre();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        r.setNombre("Restaurante");
+        String resultadoEsperado = "Restaurante";
+
+        //Manipulacion
+        String resultadoObtenido = r.getNombre();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -75,12 +129,17 @@ public class RestauranteTest {
      */
     @Test
     public void testSetNombre() {
-        System.out.println("setNombre");
-        String nombre = "";
-        Restaurante instance = new Restaurante();
-        instance.setNombre(nombre);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        String nombre = "Restaurante";
+        Restaurante r = new Restaurante();
+        r.setNombre(nombre);
+        String resultadoEsperado = "Restaurante";
+
+        //Manipulacion
+        String resultadoObtenido = r.getNombre();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -88,13 +147,16 @@ public class RestauranteTest {
      */
     @Test
     public void testGetDireccion() {
-        System.out.println("getDireccion");
-        Restaurante instance = new Restaurante();
-        String expResult = "";
-        String result = instance.getDireccion();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        r.setDireccion("Direccion");
+        String resultadoEsperado = "Direccion";
+
+        //Manipulacion
+        String resultadoObtenido = r.getDireccion();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -102,12 +164,17 @@ public class RestauranteTest {
      */
     @Test
     public void testSetDireccion() {
-        System.out.println("setDireccion");
-        String direccion = "";
-        Restaurante instance = new Restaurante();
-        instance.setDireccion(direccion);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        String direccion = "Direccion";
+        Restaurante r = new Restaurante();
+        r.setDireccion(direccion);
+        String resultadoEsperado = "Direccion";
+
+        //Manipulacion
+        String resultadoObtenido = r.getDireccion();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -115,13 +182,16 @@ public class RestauranteTest {
      */
     @Test
     public void testGetHorarios() {
-        System.out.println("getHorarios");
-        Restaurante instance = new Restaurante();
-        String expResult = "";
-        String result = instance.getHorarios();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        r.setHorarios("Horarios");
+        String resultadoEsperado = "Horarios";
+
+        //Manipulacion
+        String resultadoObtenido = r.getHorarios();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -129,12 +199,17 @@ public class RestauranteTest {
      */
     @Test
     public void testSetHorarios() {
-        System.out.println("setHorarios");
-        String horarios = "";
-        Restaurante instance = new Restaurante();
-        instance.setHorarios(horarios);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        String horarios = "Horarios";
+        Restaurante r = new Restaurante();
+        r.setHorarios(horarios);
+        String resultadoEsperado = "Horarios";
+
+        //Manipulacion
+        String resultadoObtenido = r.getHorarios();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -142,13 +217,16 @@ public class RestauranteTest {
      */
     @Test
     public void testGetTipoComida() {
-        System.out.println("getTipoComida");
-        Restaurante instance = new Restaurante();
-        String expResult = "";
-        String result = instance.getTipoComida();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        r.setTipoComida("Comida");
+        String resultadoEsperado = "Comida";
+
+        //Manipulacion
+        String resultadoObtenido = r.getTipoComida();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -156,41 +234,19 @@ public class RestauranteTest {
      */
     @Test
     public void testSetTipoComida() {
-        System.out.println("setTipoComida");
-        String tipoComida = "";
-        Restaurante instance = new Restaurante();
-        instance.setTipoComida(tipoComida);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        String comida = "Comida";
+        Restaurante r = new Restaurante();
+        r.setTipoComida(comida);
+        String resultadoEsperado = "Comida";
+
+        //Manipulacion
+        String resultadoObtenido = r.getTipoComida();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
-    /**
-     * Test of equals method, of class Restaurante.
-     */
-    @Test
-    public void testEquals() {
-        System.out.println("equals");
-        Restaurante r = null;
-        Restaurante instance = new Restaurante();
-        boolean expResult = false;
-        boolean result = instance.equals(r);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class Restaurante.
-     */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Restaurante instance = new Restaurante();
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+  
 
 }

@@ -33,162 +33,406 @@ public class SorteoTest {
      * Test of getDia method, of class Sorteo.
      */
     @Test
-    public void testGetDia() {
-        System.out.println("getDia");
-        Sorteo instance = null;
-        int expResult = 0;
-        int result = instance.getDia();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetDiaCorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setDia(1);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getDia();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testGetDiaIncorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setDia(0);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getDia() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of setDia method, of class Sorteo.
      */
     @Test
-    public void testSetDia() {
-        System.out.println("setDia");
+    public void testSetDiaCorrecto() {
+        //Inicializacion
+        int dia = 1;
+        Sorteo s = new Sorteo();
+        s.setDia(dia);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getDia() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testSetDiaIncorrecto() {
+        //Inicializacion
         int dia = 0;
-        Sorteo instance = null;
-        instance.setDia(dia);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Sorteo s = new Sorteo();
+        s.setDia(dia);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getDia() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of getMes method, of class Sorteo.
      */
     @Test
-    public void testGetMes() {
-        System.out.println("getMes");
-        Sorteo instance = null;
-        int expResult = 0;
-        int result = instance.getMes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetMesCorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setMes(1);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getMes() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testGetMesIncorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setMes(0);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getMes() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of setMes method, of class Sorteo.
      */
     @Test
-    public void testSetMes() {
-        System.out.println("setMes");
+    public void testSetMesCorrecto() {
+        //Inicializacion
+        int mes = 1;
+        Sorteo s = new Sorteo();
+        s.setMes(mes);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getMes() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testSetMesIncorrecto() {
+        //Inicializacion
         int mes = 0;
-        Sorteo instance = null;
-        instance.setMes(mes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Sorteo s = new Sorteo();
+        s.setDia(mes);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getMes() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of getAnio method, of class Sorteo.
      */
     @Test
-    public void testGetAnio() {
-        System.out.println("getAnio");
-        Sorteo instance = null;
-        int expResult = 0;
-        int result = instance.getAnio();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetAnioCorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setAnio(1);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getAnio() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testGetAnioIncorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setAnio(0);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getAnio() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of setAnio method, of class Sorteo.
      */
     @Test
-    public void testSetAnio() {
-        System.out.println("setAnio");
+    public void testSetAnioCorrecto() {
+        //Inicializacion
+        int anio = 1;
+        Sorteo s = new Sorteo();
+        s.setAnio(anio);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getAnio() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testSetAnioIncorrecto() {
+        //Inicializacion
         int anio = 0;
-        Sorteo instance = null;
-        instance.setAnio(anio);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Sorteo s = new Sorteo();
+        s.setAnio(anio);
+        int resultadoEsperado = 0;
+                
+        //Manipulacion
+        int resultadoObtenido = s.getAnio() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of getListaParticipantes method, of class Sorteo.
      */
     @Test
-    public void testGetListaParticipantes() {
-        System.out.println("getListaParticipantes");
-        Sorteo instance = null;
-        ArrayList<Cliente> expResult = null;
-        ArrayList<Cliente> result = instance.getListaParticipantes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetListaParticipantesConElementos() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        Cliente c = new Cliente();
+        c.setNombre("Roberto");
+        c.setEmail("roberto@test");
+
+        ArrayList<Cliente> listaPrueba = new ArrayList();
+        listaPrueba.add(c);
+        s.setListaParticipantes(listaPrueba);
+
+        ArrayList<Cliente> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaParticipantes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
+    }
+    
+    @Test
+    public void testGetListaParticipantesVacia() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+
+        ArrayList<Cliente> listaPrueba = new ArrayList();
+        s.setListaParticipantes(listaPrueba);
+
+        ArrayList<Cliente> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaParticipantes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
      * Test of setListaParticipantes method, of class Sorteo.
      */
     @Test
-    public void testSetListaParticipantes() {
-        System.out.println("setListaParticipantes");
-        ArrayList<Cliente> listaParticipantes = null;
-        Sorteo instance = null;
-        instance.setListaParticipantes(listaParticipantes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetListaParticipantesConElementos() {
+        //Inicializacion
+        Sorteo s = new Sorteo ();
+        Cliente c = new Cliente();
+        c.setNombre("Roberto");
+        c.setEmail("roberto@test");
+
+        ArrayList<Cliente> resultadoEsperado = new ArrayList();
+        resultadoEsperado.add(c);
+        s.setListaParticipantes(resultadoEsperado);
+
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaParticipantes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
+    }
+    
+    @Test
+    public void testSetListaParticipantesVacia() {
+        //Inicializacion
+        Sorteo s = new Sorteo ();
+
+        ArrayList<Cliente> resultadoEsperado = new ArrayList();
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaParticipantes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
      * Test of getNumeroGanadores method, of class Sorteo.
      */
     @Test
-    public void testGetNumeroGanadores() {
-        System.out.println("getNumeroGanadores");
-        Sorteo instance = null;
-        int expResult = 0;
-        int result = instance.getNumeroGanadores();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetNumeroGanadoresCorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setNumeroGanadores(1);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getNumeroGanadores();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
+    }
+
+    @Test
+    public void testGetNumeroGanadoresIncorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setNumeroGanadores(0);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getNumeroGanadores();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
      * Test of setNumeroGanadores method, of class Sorteo.
      */
     @Test
-    public void testSetNumeroGanadores() {
-        System.out.println("setNumeroGanadores");
-        int numeroGanadores = 0;
-        Sorteo instance = null;
-        instance.setNumeroGanadores(numeroGanadores);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetNumeroGanadoresCorrecto() {
+        //Inicializacion
+        int ganadores = 1;
+        Sorteo s = new Sorteo();
+        s.setNumeroGanadores(ganadores);
+        int resultadoEsperado = 1;
+
+        //Manipulacion
+        int resultadoObtenido = s.getNumeroGanadores() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testSetNumeroGanadoresIncorrecto() {
+        //Inicializacion
+        int ganadores = 0;
+        Sorteo s = new Sorteo();
+        s.setNumeroGanadores(ganadores);
+        int resultadoEsperado = 0;
+
+        //Manipulacion
+        int resultadoObtenido = s.getNumeroGanadores() ;
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of getPremio method, of class Sorteo.
      */
     @Test
-    public void testGetPremio() {
-        System.out.println("getPremio");
-        Sorteo instance = null;
-        String expResult = "";
-        String result = instance.getPremio();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetPremioCorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setPremio("Un paquete de yerba");
+        String resultadoEsperado = "Un paquete de yerba";
+
+        //Manipulacion
+        String resultadoObtenido = s.getPremio();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
+    }
+
+    @Test
+    public void testGetPremioIncorrecto() {
+        //Inicializacion
+        Sorteo s = new Sorteo();
+        s.setPremio("");
+        String resultadoEsperado = "";
+
+        //Manipulacion
+        String resultadoObtenido = s.getPremio();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
      * Test of setPremio method, of class Sorteo.
      */
     @Test
-    public void testSetPremio() {
-        System.out.println("setPremio");
+    public void testSetPremioCorrecto() {
+        //Inicializacion
+        String premio = "Un paquete de yerba";
+        Sorteo s = new Sorteo();
+        s.setPremio(premio);
+        String resultadoEsperado = "Un paquete de yerba";
+
+        //Manipulacion
+        String resultadoObtenido = s.getPremio();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testSetPremioIncorrecto() {
+        //Inicializacion
         String premio = "";
-        Sorteo instance = null;
-        instance.setPremio(premio);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Sorteo s = new Sorteo();
+        s.setPremio(premio);
+        String resultadoEsperado = "";
+
+        //Manipulacion
+        String resultadoObtenido = s.getPremio();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
 }

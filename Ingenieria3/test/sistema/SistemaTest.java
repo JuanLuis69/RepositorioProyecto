@@ -33,27 +33,79 @@ public class SistemaTest {
      * Test of getListaClientes method, of class Sistema.
      */
     @Test
-    public void testGetListaClientes() {
-        System.out.println("getListaClientes");
-        Sistema instance = new Sistema();
-        ArrayList<Cliente> expResult = null;
-        ArrayList<Cliente> result = instance.getListaClientes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetListaClientesConElementos() {
+        //Inicializacion
+        Sistema s = new Sistema();
+        Cliente c = new Cliente();
+        c.setNombre("Roberto");
+        c.setEmail("roberto@test");
+
+        ArrayList<Cliente> listaPrueba = new ArrayList();
+        listaPrueba.add(c);
+        s.setListaClientes(listaPrueba);
+
+        ArrayList<Cliente> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaClientes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
+    }
+
+    @Test
+    public void testGetListaClientesVacia() {
+        //Inicializacion
+        Sistema s = new Sistema();
+
+        ArrayList<Cliente> listaPrueba = new ArrayList();
+        s.setListaClientes(listaPrueba);
+
+        ArrayList<Cliente> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaClientes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
      * Test of setListaClientes method, of class Sistema.
      */
     @Test
-    public void testSetListaClientes() {
-        System.out.println("setListaClientes");
-        ArrayList<Cliente> listaClientes = null;
-        Sistema instance = new Sistema();
-        instance.setListaClientes(listaClientes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetListaClientesConElementos() {
+        //Inicializacion
+        Sistema s = new Sistema();
+        Cliente c = new Cliente();
+        c.setNombre("Roberto");
+        c.setEmail("roberto@test");
+
+        ArrayList<Cliente> resultadoEsperado = new ArrayList();
+        resultadoEsperado.add(c);
+        s.setListaClientes(resultadoEsperado);
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaClientes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    @Test
+    public void testSetListaClientesVacia() {
+        //Inicializacion
+        Sistema s = new Sistema();
+
+        ArrayList<Cliente> resultadoEsperado = new ArrayList();
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaClientes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -61,13 +113,17 @@ public class SistemaTest {
      */
     @Test
     public void testGetRestaurante() {
-        System.out.println("getRestaurante");
-        Sistema instance = new Sistema();
-        Restaurante expResult = null;
-        Restaurante result = instance.getRestaurante();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Sistema s = new Sistema();
+        Restaurante r = new Restaurante();
+        s.setRestaurante(r);
+        Restaurante resultadoEsperado = r;
+
+        //Manipulacion
+        Restaurante resultadoObtenido = s.getRestaurante();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -75,12 +131,18 @@ public class SistemaTest {
      */
     @Test
     public void testSetRestaurante() {
-        System.out.println("setRestaurante");
-        Restaurante restaurante = null;
-        Sistema instance = new Sistema();
-        instance.setRestaurante(restaurante);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Restaurante r = new Restaurante();
+        Sistema s = new Sistema();
+        s.setRestaurante(r);
+        Restaurante resultadoEsperado = r;
+
+        //Manipulacion
+        Restaurante resultadoObtenido = s.getRestaurante();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
@@ -88,13 +150,18 @@ public class SistemaTest {
      */
     @Test
     public void testGetSorteo() {
-        System.out.println("getSorteo");
-        Sistema instance = new Sistema();
-        Sorteo expResult = null;
-        Sorteo result = instance.getSorteo();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Sistema s = new Sistema();
+        Sorteo so = new Sorteo();
+        s.setSorteo(so);
+        Sorteo resultadoEsperado = so;
+
+        //Manipulacion
+        Sorteo resultadoObtenido = s.getSorteo();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
@@ -102,110 +169,100 @@ public class SistemaTest {
      */
     @Test
     public void testSetSorteo() {
-        System.out.println("setSorteo");
-        Sorteo sorteo = null;
-        Sistema instance = new Sistema();
-        instance.setSorteo(sorteo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Inicializacion
+        Sistema s = new Sistema();
+        Sorteo so = new Sorteo();
+        s.setSorteo(so);
+        Sorteo resultadoEsperado = so;
+
+        //Manipulacion
+        Sorteo resultadoObtenido = s.getSorteo();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
      * Test of getListaEvaluaciones method, of class Sistema.
      */
     @Test
-    public void testGetListaEvaluaciones() {
-        System.out.println("getListaEvaluaciones");
-        Sistema instance = new Sistema();
-        ArrayList<Evaluacion> expResult = null;
-        ArrayList<Evaluacion> result = instance.getListaEvaluaciones();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetListaEvaluacionesConElementos() {
+        //Inicializacion
+        Sistema s = new Sistema();
+        Evaluacion e = new Evaluacion();
+        e.setCliente(null);
+        e.setEstrellas(1);
+        e.setResena("");
+
+        ArrayList<Evaluacion> listaPrueba = new ArrayList();
+        listaPrueba.add(e);
+        s.setListaEvaluaciones(listaPrueba);
+
+        ArrayList<Evaluacion> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = s.getListaEvaluaciones();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
+    }
+
+    @Test
+    public void testGetListaEvaluacionesVacia() {
+        //Inicializacion
+        Sistema s = new Sistema();
+
+        ArrayList<Evaluacion> listaPrueba = new ArrayList();
+        s.setListaEvaluaciones(listaPrueba);
+
+        ArrayList<Evaluacion> resultadoEsperado = listaPrueba;
+
+        //Manipulacion
+        ArrayList<Cliente> resultadoObtenido = s.getListaClientes();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
      * Test of setListaEvaluaciones method, of class Sistema.
      */
     @Test
-    public void testSetListaEvaluaciones() {
-        System.out.println("setListaEvaluaciones");
-        ArrayList<Evaluacion> listaEvaluaciones = null;
-        Sistema instance = new Sistema();
-        instance.setListaEvaluaciones(listaEvaluaciones);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetListaEvaluacionesConElementos() {
+        //Inicializacion
+        Sistema s = new Sistema();
+        Evaluacion e = new Evaluacion();
+        e.setCliente(null);
+        e.setEstrellas(1);
+        e.setResena("");
+
+        ArrayList<Evaluacion> resultadoEsperado = new ArrayList();
+        resultadoEsperado.add(e);
+        s.setListaEvaluaciones(resultadoEsperado);
+
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = s.getListaEvaluaciones();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
-    /**
-     * Test of crearCliente method, of class Sistema.
-     */
     @Test
-    public void testCrearCliente_String_String() {
-        System.out.println("crearCliente");
-        String nombre = "";
-        String email = "";
-        Sistema instance = new Sistema();
-        instance.crearCliente(nombre, email);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    public void testSetListaEvaluacionesVacia() {
+        //Inicializacion
+        Sistema s = new Sistema();
 
-    /**
-     * Test of crearCliente method, of class Sistema.
-     */
-    @Test
-    public void testCrearCliente_Cliente() {
-        System.out.println("crearCliente");
-        Cliente c = null;
-        Sistema instance = new Sistema();
-        instance.crearCliente(c);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        ArrayList<Evaluacion> resultadoEsperado = new ArrayList();
 
-    /**
-     * Test of crearRestaurante method, of class Sistema.
-     */
-    @Test
-    public void testCrearRestaurante() {
-        System.out.println("crearRestaurante");
-        String nombre = "";
-        String direccion = "";
-        String horarios = "";
-        String tipoComida = "";
-        Sistema instance = new Sistema();
-        instance.crearRestaurante(nombre, direccion, horarios, tipoComida);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        //Manipulacion
+        ArrayList<Evaluacion> resultadoObtenido = s.getListaEvaluaciones();
 
-    /**
-     * Test of crearEvaluacion method, of class Sistema.
-     */
-    @Test
-    public void testCrearEvaluacion_3args() {
-        System.out.println("crearEvaluacion");
-        int estrellas = 0;
-        String resena = "";
-        Cliente cliente = null;
-        Sistema instance = new Sistema();
-        instance.crearEvaluacion(estrellas, resena, cliente);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
 
-    /**
-     * Test of crearEvaluacion method, of class Sistema.
-     */
-    @Test
-    public void testCrearEvaluacion_Evaluacion() {
-        System.out.println("crearEvaluacion");
-        Evaluacion e = null;
-        Sistema instance = new Sistema();
-        instance.crearEvaluacion(e);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -213,16 +270,27 @@ public class SistemaTest {
      */
     @Test
     public void testDefinirSorteo() {
-        System.out.println("definirSorteo");
+        //Inicializacion
+        Sistema s = new Sistema();
+        Sorteo resultadoEsperado = new Sorteo();
         int numeroGanadores = 0;
         String premio = "";
         int dia = 0;
         int mes = 0;
         int anio = 0;
-        Sistema instance = new Sistema();
-        instance.definirSorteo(numeroGanadores, premio, dia, mes, anio);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        resultadoEsperado.setAnio(anio);
+        resultadoEsperado.setDia(dia);
+        resultadoEsperado.setMes(mes);
+        resultadoEsperado.setNumeroGanadores(numeroGanadores);
+        resultadoEsperado.setPremio(premio);
+        s.definirSorteo(numeroGanadores, premio, dia, mes, anio);
+
+        //Manipulacion
+        Sorteo resultadoObtenido = s.getSorteo();
+
+        //Verificacion
+        assertEquals(resultadoEsperado, resultadoObtenido);
+
     }
 
     /**
@@ -230,11 +298,7 @@ public class SistemaTest {
      */
     @Test
     public void testRealizarSorteo() throws Exception {
-        System.out.println("realizarSorteo");
-        Sistema instance = new Sistema();
-        instance.realizarSorteo();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -242,13 +306,7 @@ public class SistemaTest {
      */
     @Test
     public void testEnviarEmail() throws Exception {
-        System.out.println("enviarEmail");
-        String mailDestinatario = "";
-        String nombre = "";
-        Sistema instance = new Sistema();
-        instance.enviarEmail(mailDestinatario, nombre);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -256,12 +314,7 @@ public class SistemaTest {
      */
     @Test
     public void testContactarGanador() {
-        System.out.println("contactarGanador");
-        Cliente ganador = null;
-        Sistema instance = new Sistema();
-        instance.contactarGanador(ganador);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
 }
